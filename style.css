@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 #app {
@@ -17,18 +18,19 @@
 }
 
 img {
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
 }
 
 #header {
-    background-color: #F2545B;
+    background-color: #232b2b;
     grid-area: hed;
 }
 
 #nav {
-    background-color: #A93F55;
+    background-color: #232b2b;
+    font-size: 30px;
     grid-area: nav;
 }
 
@@ -41,15 +43,13 @@ ul {
 
 li a {
     display: block;
-    color: #000;
+    color: white;
     padding: 8px 16px;
     text-decoration: none;
 }
 
-
 li a:hover {
     background-color: #555;
-    color: white;
 }
 
 #imgGallery {
@@ -61,7 +61,7 @@ li a:hover {
 }
 
 #footer {
-    background-color: #F3F7F0;
+    background-color: #353839;
     grid-area: fot;
 }
 
@@ -75,6 +75,13 @@ li a:hover {
         "img img img"
         "fot fot fot"
         ;
+    }
+    
+    li a {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
     }
 }
 
