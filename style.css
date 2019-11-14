@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #app {
@@ -8,47 +9,71 @@
     text-align: center;
     height: 100vh;
     grid-template-areas: 
-        "header header header"
-        "nav article-1 article-1"
-        "nav article-2 article-2"
-        "footer footer footer"
+        "hed hed hed"
+        "nav img img"
+        "nav img img"
+        "fot fot fot"
     ;
 }
 
+img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
 #header {
-    background-color: #f3ca40;
-    grid-area: header;
+    background-color: #F2545B;
+    grid-area: hed;
 }
 
 #nav {
-    background-color: #4b4e6d;
+    background-color: #A93F55;
     grid-area: nav;
 }
 
-#article-1 {
-    background-color: #6a8d92;
-    grid-area: article-1;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
 }
 
-#article-2 {
-    background-color: yellow;
-    grid-area: article-2;
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+#imgGallery {
+    background-color: #19323C;
+    grid-area: img;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-rows: repeat(6, 200px);
+    grid-gap: 1rem;
 }
 
 #footer {
-    background-color: #f08a4b;
-    grid-area: footer;
+    background-color: #F3F7F0;
+    grid-area: fot;
 }
 
 @media (max-width: 1100px) {
     #app {
         grid-template-rows: 20% 10% 25% 25% 20%;
         grid-template-areas: 
-        "header header header"
+        "hed hed hed"
         "nav nav nav"
-        "article-1 article-1"
-        "article-2 article-2"
-        "footer footer footer"
+        "img img img"
+        "img img img"
+        "fot fot fot"
         ;
     }
 }
@@ -58,11 +83,11 @@
         font-size: 4em;
         grid-template-rows: 20% 10% 20% 10% 20% 20%;
         grid-template-areas: 
-        "header header"
+        "hed hed"
         "nav nav"
-        "article-1 article-1"
-        "article-2 article-2"
-        "footer footer"
+        "img img"
+        "img img"
+        "fot fot"
         ;
     }
 }
