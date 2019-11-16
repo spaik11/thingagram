@@ -21,6 +21,15 @@ img {
     width: 200px;
     height: 200px;
     object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+img:hover {
+    opacity: 0.5;
 }
 
 #header {
@@ -30,25 +39,17 @@ img {
 
 #nav {
     background-color: #232b2b;
-    font-size: 30px;
+    font-size: 50px;
     grid-area: nav;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 200px;
-}
-
-li a {
     display: block;
     color: white;
-    padding: 8px 16px;
+}
+
+a {
     text-decoration: none;
 }
 
-li a:hover {
+a:hover {
     background-color: #555;
 }
 
@@ -76,12 +77,14 @@ li a:hover {
         "fot fot fot"
         ;
     }
+
+    #nav {
+        grid-area: nav;
+    }
     
-    li a {
-        display: block;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+    a {
+        justify-items: stretch;
+        padding: 8px 16px;
     }
 }
 
