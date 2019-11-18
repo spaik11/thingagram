@@ -43,6 +43,8 @@ img:hover {
     display: block;
     color: white;
     text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 #about {
@@ -69,6 +71,7 @@ a:hover {
     grid-area: fot;
     text-align: right;
     font-size: 15px;
+    padding: 25px;
 }
 
 #github {
@@ -79,13 +82,8 @@ a:hover {
     #app {
         grid-template-rows: 20% 10% 25% 25% 20%;
         text-align: center;
-        grid-template-areas: 
-        "hed hed hed"
-        "nav nav nav"
-        "img img img"
-        "img img img"
-        "fot fot fot"
-        ;
+        display: flex;
+        flex-direction: column;
     }
 
     #nav {
@@ -102,24 +100,23 @@ a:hover {
 @media (max-width: 500px) {
     #app {
         font-size: 4em;
-        grid-template-rows: 20% 10% 20% 10% 20% 20%;
         text-align: center;
-        grid-template-areas: 
-        "hed hed"
-        "nav nav"
-        "img img"
-        "img img"
-        "fot fot"
-        ;
+        display: flex;
+        flex-direction: column;
     }
 
     #imgGallery {
         grid-area: img;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
     a {
     writing-mode: horizontal-tb;
+    }
+
+    #nav {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     #footer {
